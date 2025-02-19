@@ -7,12 +7,24 @@
 
 import SwiftUI
 
+struct ContentView: View {
 
-struct ContentView:  View {
     var body: some View {
-        Text("Hello")
+        
+        NavigationStack {
+            List {
+                NavigationLink("Cards Shuffling") {
+                    Cards()
+                }
+//                NavigationLink("Tilting") {
+//                    TiltListView()
+//            }
+           
+            }
+        }
     }
 }
+
 #Preview {
     ContentView()
 }
