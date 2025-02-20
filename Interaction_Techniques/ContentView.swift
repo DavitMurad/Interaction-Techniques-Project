@@ -16,9 +16,9 @@ struct ContentView: View {
                 NavigationLink("Cards Shuffling") {
                     Cards()
                 }
-//                NavigationLink("Tilting") {
-//                    TiltListView()
-//            }
+                NavigationLink("Tilting") {
+                    TiltListView()
+            }
            
             }
         }
