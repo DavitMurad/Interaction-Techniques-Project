@@ -400,6 +400,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Interaction-Techniques-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to detec eye movement.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to the microphone for voice commands.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We need access to speech recognition for voice commands.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -433,6 +434,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Interaction-Techniques-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to detec eye movement.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to the microphone for voice commands.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We need access to speech recognition for voice commands.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

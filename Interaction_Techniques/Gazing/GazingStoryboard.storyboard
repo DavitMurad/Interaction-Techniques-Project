@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gazing View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="GazingViewController" id="Y6W-OH-hqX" customClass="GazingViewController" customModule="Interaction_Techniques" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPl-hc-k6u" userLabel="centralButton">
+                                <rect key="frame" x="15" y="467.66666666666674" width="363" height="335.33333333333326"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Blink on this area to conifrm!"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👁️ Blinks Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="akC-np-F0A">
+                                <rect key="frame" x="133" y="204.66666666666666" width="127" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjV-25-5nH">
+                                <rect key="frame" x="191.33333333333334" y="227.66666666666666" width="10.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🎯 Button Pressed!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="pcc-dl-xzK">
+                                <rect key="frame" x="129" y="273.66666666666669" width="135" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zE-8j-OJu">
+                                <rect key="frame" x="191.33333333333334" y="296.66666666666669" width="10.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gaze at the target, blink to activate." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elY-Ie-Jfy">
+                                <rect key="frame" x="15" y="94" width="363" height="75.666666666666686"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="oPl-hc-k6u" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="CDB-VY-glU"/>
+                            <constraint firstItem="akC-np-F0A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="133" id="E2k-v1-p5a"/>
+                            <constraint firstItem="3zE-8j-OJu" firstAttribute="centerX" secondItem="pcc-dl-xzK" secondAttribute="centerX" id="Gde-ve-aKA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oPl-hc-k6u" secondAttribute="trailing" constant="15" id="Hqu-5I-YEZ"/>
+                            <constraint firstItem="oPl-hc-k6u" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HyU-tP-VbG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="oPl-hc-k6u" secondAttribute="bottom" constant="15" id="K07-XJ-XJc"/>
+                            <constraint firstItem="oPl-hc-k6u" firstAttribute="top" secondItem="3zE-8j-OJu" secondAttribute="bottom" constant="150" id="Kod-0v-Pyo"/>
+                            <constraint firstItem="IjV-25-5nH" firstAttribute="centerX" secondItem="akC-np-F0A" secondAttribute="centerX" id="Q2T-2k-2Ar"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="akC-np-F0A" secondAttribute="trailing" constant="133" id="XOO-iZ-toG"/>
+                            <constraint firstItem="pcc-dl-xzK" firstAttribute="top" secondItem="IjV-25-5nH" secondAttribute="bottom" constant="25" id="ZRw-aX-HN1"/>
+                            <constraint firstItem="akC-np-F0A" firstAttribute="top" secondItem="elY-Ie-Jfy" secondAttribute="bottom" constant="35" id="e3a-vS-Pl4"/>
+                            <constraint firstItem="3zE-8j-OJu" firstAttribute="top" secondItem="pcc-dl-xzK" secondAttribute="bottom" constant="5" id="erH-P2-mUB"/>
+                            <constraint firstItem="pcc-dl-xzK" firstAttribute="centerX" secondItem="IjV-25-5nH" secondAttribute="centerX" id="f8r-v0-FzW"/>
+                            <constraint firstItem="elY-Ie-Jfy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="35" id="fTW-mx-4lt"/>
+                            <constraint firstAttribute="trailing" secondItem="elY-Ie-Jfy" secondAttribute="trailing" constant="15" id="nBt-e8-aaU"/>
+                            <constraint firstItem="oPl-hc-k6u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="t83-N4-f8p"/>
+                            <constraint firstItem="elY-Ie-Jfy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="tGy-fs-CJB"/>
+                            <constraint firstItem="IjV-25-5nH" firstAttribute="top" secondItem="akC-np-F0A" secondAttribute="bottom" constant="5" id="wFd-Tj-UEy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blinkCount" destination="IjV-25-5nH" id="VGA-vB-AbW"/>
+                        <outlet property="centralButton" destination="oPl-hc-k6u" id="RH5-3h-UiN"/>
+                        <outlet property="pressedCount" destination="3zE-8j-OJu" id="Dlk-PK-WtI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+</document>
