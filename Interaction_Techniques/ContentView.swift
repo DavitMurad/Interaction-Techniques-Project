@@ -16,14 +16,11 @@ struct ContentView: View {
                 NavigationLink("Cards Shuffling") {
                     Cards()
                 }
-                NavigationLink("Tilting") {
+                NavigationLink("Tilting & Voice Command") {
                     TiltListView()
                 }
-                NavigationLink("Gaze detection") {
+                NavigationLink("Gaze detection and Eye Blink") {
                     GazingView()
-                }
-                NavigationLink("Hand Gesture") {
-                    GestureView()
                 }
             }
         }

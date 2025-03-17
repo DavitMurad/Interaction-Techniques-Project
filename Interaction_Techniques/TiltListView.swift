@@ -89,7 +89,11 @@ struct TiltListView: View {
     private func handleVoiceCommand(_ command: String) {
         if command.contains("select") {
             selectedItemLabel = items[selectedIndex]
+            
+            let generator = UINotificationFeedbackGenerator()
+                    generator.notificationOccurred(.success)
             stopInteraction()
+            
         }
     }
 }
@@ -105,20 +109,23 @@ class MotionManager_Tilting: ObservableObject {
         case none
     }
 
+    // Adjust these thresholds for sensitivity
+    private let tiltThreshold: Double = 0.2 // Lower value for higher sensitivity
+
     func startTiltDetection(onTilt: @escaping (TiltDirection) -> Void) {
         guard motion.isAccelerometerAvailable else { return }
 
         if isDetectingTilt { return }
         isDetectingTilt = true
 
-        motion.accelerometerUpdateInterval = 0.2
+        motion.accelerometerUpdateInterval = 0.3 // Faster updates for smoother interaction
         motion.startAccelerometerUpdates(to: queue) { [weak self] data, error in
             guard let acceleration = data?.acceleration else { return }
 
             DispatchQueue.main.async {
-                if acceleration.y < -0.4 {
+                if acceleration.y < -self!.tiltThreshold {
                     onTilt(.down)
-                } else if acceleration.y > 0.4 {
+                } else if acceleration.y > self!.tiltThreshold {
                     onTilt(.up)
                 } else {
                     onTilt(.none)
@@ -132,6 +139,7 @@ class MotionManager_Tilting: ObservableObject {
         isDetectingTilt = false
     }
 }
+
 
 
 class SpeechRecognizerManager: ObservableObject {
@@ -197,7 +205,6 @@ class SpeechRecognizerManager: ObservableObject {
     }
 
     private func processCommand(_ command: String) {
-        detectedCommand = command // Update for UI or other listeners
-        // You can send this to the TiltListView if needed via a callback or state
+        detectedCommand = command
     }
 }
